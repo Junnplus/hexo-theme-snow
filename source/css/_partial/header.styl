@@ -22,7 +22,6 @@
     height:10%
     background-color: #fff
     #header-outer
-      display:none
     #header-inner
       border-bottom: 1px solid #ddd
       &.active
@@ -55,11 +54,23 @@
     border-bottom: 1px solid rgb(63, 176, 231);
     .title
       opacity: 1
-
+  .avatar
+    padding-top:28px
+    img
+      border-radius:50px
+      width:42px
+      -webkit-transition:2s
+      &:hover
+        -webkit-transform: rotate(360deg)
+        -o-transform: rotate(360deg)
+        -moz-transform: rotate(360deg)
+        transform: rotate(360deg)
+        
 #header-outer
-  min-height:200px
+  min-height:150px
   height: 100%
   position: relative
+  margin-top: 40px
 
 #banner
   position: absolute
@@ -107,13 +118,11 @@ $logo-text
   top: 0
 
 .site-nav
-  background: #FFF
-  border-bottom: 1px solid #EEE
-  padding: 0px 1.5rem 0 1.5rem
+  padding: 0px 1rem 0 1rem
   position: fixed
   top: 48px
   left: 0
-  width: 100%
+  width: 26%
   z-index: 999
   text-align: left;
   display:none
@@ -146,7 +155,6 @@ $nav-link
   @extend $nav-link
   font-family: font-icon
   text-align: center
-  font-size: font-size
   width: font-size
   height: font-size
   padding: 20px 15px
@@ -186,7 +194,7 @@ $nav-link
 #sub-nav
   position: absolute
   top: 0
-  right:42px
+  right:0px
 
 #rss-wrap
  width:100px
@@ -202,9 +210,72 @@ $nav-link
   &:before
     content: "\f09b"
 
+#nav-archives-link
+  font-size:24px
+  &:before
+    content: "\f015"
+
+#nav-weibo-link
+  font-size:24px
+  &:before
+    content: "\f18a"
+
+#nav-twitter-link
+  font-size:24px
+  &:before
+    content: "\f099"
+
+#nav-facebook-link
+  font-size:24px
+  &:before
+    content: "\f09a"
+
+#nav-instagram-link
+  font-size:24px
+  &:before
+    content: "\f16d"
+
 #nav-search-btn
   &:before
     content: "\f002"
+
+.fa
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+
+.fa-github:before
+  content: "\f09b";
+
+.fa-linux:before
+  content: "\f17c";
+
+.fa-home:before
+  content: "\f015";
+
+.fa-rss:before
+  content: "\f09e";
+
+.fa-lg
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+
+.fa-2x
+  font-size: 24px;
+
+.fa-3x
+  font-size: 3em;
+
+.fa-4x
+  font-size: 4em;
+
+.fa-5x
+  font-size: 5em;
 
 #search-form-wrap
   position: absolute
